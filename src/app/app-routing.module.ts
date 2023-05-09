@@ -10,7 +10,19 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'species',
+    loadChildren: () => import('./species/species.module').then( m => m.SpeciesPageModule)
   },
+  {
+    path: 'fossils',
+    loadChildren: () => import('./fossils/fossils.module').then( m => m.FossilsPageModule)
+  },
+  {
+    path: 'extinction',
+    loadChildren: () => import('./extinction/extinction.module').then( m => m.ExtinctionPageModule)
+  },
+
 ];
 
 @NgModule({

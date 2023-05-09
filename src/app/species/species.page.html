@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start" />
+    <ion-title>Dinosaur Species</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dinosaur Species</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<div id="container" style="overflow: auto;">
+  <ion-list>
+    <ion-item *ngFor="let dino of dinosaurs">
+      <ion-label>{{dino.Name}}</ion-label>
+      <p>{{dino.Description}}</p>
+    </ion-item>
+  </ion-list>
+</div>
