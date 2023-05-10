@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-back-button slot="start"/>
+    <ion-back-button slot="start" />
     <ion-title>Dinosaur Fossils</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,12 +14,41 @@
 </ion-content>
 
 <div id="container">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dinosauria_montage_3.jpg/290px-Dinosauria_montage_3.jpg"> <br> <br>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dinosauria_montage_3.jpg/290px-Dinosauria_montage_3.jpg">
+  <br> <br>
   <p>Pick your favourite! I will name the creatures from left to right, top to bottom.</p> <br>
-  <ion-button>Stegosaurus</ion-button> <br>
-  <ion-button>Herrerasaurus</ion-button> <br>
-  <ion-button>Triceratops</ion-button> <br>
-  <ion-button>Apatosaurus</ion-button> <br>
-  <ion-button>Microraptor</ion-button> <br>
-  <ion-button>Edmontosaurus</ion-button> <br>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="favFossil">
+      <ion-item>
+        <ion-label>Stegosaurus</ion-label>
+        <ion-radio value="Stegosaurus"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Herrerasaurus</ion-label>
+        <ion-radio value="Herrerasaurus"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Triceratops</ion-label>
+        <ion-radio value="Triceratops"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Apatosaurus</ion-label>
+        <ion-radio value="Apatosaurus"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Microraptor</ion-label>
+        <ion-radio value="Microraptor"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Edmontosaurus</ion-label>
+        <ion-radio value="Edmontosaurus"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <br>
+  <ion-button (click)="saveFossil()">Save</ion-button>
+  <br> <br>
+  <p>Your last chosen favourite: {{favFossil}}</p>
 </div>

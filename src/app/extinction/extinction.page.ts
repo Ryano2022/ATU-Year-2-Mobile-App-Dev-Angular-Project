@@ -11,5 +11,4 @@ export class ExtinctionPage implements OnInit {
 
   ngOnInit() {
   }
-
 }
